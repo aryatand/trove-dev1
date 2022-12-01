@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>FAQ</title>
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link href="https://fonts.googlefonts.cn/css?family=Do+Hyeon" rel="stylesheet">
+        <script src = "jquery-3.6.1.min.js"></script>
+
+        <style>
+            header {
+                background-color: #B3B3E8;
+            }
+
+            #faqtitle {
+                font-size: 30pt;
+                color: #656e99;
+                text-align: center;
+                font-weight: bolder;
+            }
+
+            dl {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+
+            dt {
+                background-color: #F6F6EB;
+                padding: 1%;
+            }
+
+            dd {
+                background-color: #D5D6EA;
+                padding: 2%;
+            }
+
+            .highlight {
+                background-color: #656e99;
+                color: #F6F6EB;
+            }
+
+            #showall {
+                width: 100px;
+                height: 20px;
+                background-color: black;
+                color: #F6F6EB;
+                float: right;
+                margin: 5px;
+                text-align: center;
+                padding: 2px;
+            }
+
+            #hideall {
+                width: 100px;
+                height: 20px;
+                background-color: black;
+                color: #F6F6EB;
+                float: right;
+                margin: 5px;
+                text-align: center;
+                padding: 2px;
+                margin-right: 20%;
+            }
+
+            #faqsubmission {
+                text-align: center;
+                background-color: #656e99;
+                border-radius: 20px;
+                width: 30%;
+                padding: 2%;
+                margin: auto;
+                color: white;
+            }
+
+            #question {
+                width: 300px;
+                height: 100px;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function(){
+                $("dd").fadeOut(0);
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="./index.html">
+              <h1 class="fl">Trove</h1>
+            </a>
+            <div class="fr">
+              <a href="./about.html" class="btns">ABOUT</a>
+              <a href="" class="btns">GOALS</a>
+              <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/contact.html" class="btns">CONTACT</a>
+              <div href="javascript:;" class="menu">
+                <img src="./menu.png" alt="">
+                <div class="downlist">
+                  <a href="">Calendar</a>
+                  <a href="">To-do List</a>
+                  <a href="">Home Life</a>
+                  <a href="">Pomodoro</a>
+                  <a href="">Weekends</a>
+                  <a href="">Socialize</a>
+                  <a href="">FAQ</a>
+                </div>
+              </div>
+            </div>
+        </header>
+
+        <br><br><br>
+
+        <div id = "faqtitle">
+            Frequently Asked Questions
+        </div>
+
+        <br>
+
+        <div id = "hideall">hide all</div>
+        <div id = "showall">show all</div>
+
+        <br><br><br>
+        
+        <dl>
+            <dt><strong>How can I make sure I keep up these healthy and organized habits throughout college?</strong></dt>
+            <dd>
+                Hold yourself accountable! You can even do check-ins with yourself at the end of each week 
+                and rate how organized you were the past week. This will make you more aware of how you are living.
+            </dd>
+
+            <br><br>
+
+            <dt><strong>How can I prioritize tasks within a large project so I don't procrastinate?</strong></dt>
+            <dd>
+                Physically writing down each step until the project is done before you even start is a great way to 
+                visualize everything you have to do. This also makes it much more manageable to tackle each small task 
+                rather than feeling intimidated by the whole project. Take it step by step!
+            </dd>
+
+            <br><br>
+
+            <dt><strong>I keep getting distracted when I am studying, how do I fix this?</strong></dt>
+            <dd>
+                Personally, I (Arya) use the Pomodoro method when I really need to do work yet, I sometimes just cannot 
+                put my phone down. This forces me to work for a short amount of time and take a break. Time also passes 
+                by super fast using this method. Sometimes this doesn't work for everyone, so maybe divide up your time 
+                by each task on your agenda. Do one task then spend 5 minutes taking a break and go through your to-do list 
+                like that!
+            </dd>
+
+        </dl>
+
+        <br><br>
+
+        <div id = "faqsubmission">
+            <form action = "process.php" method = "post">
+                <label>e-mail:</label>
+                <input type = "email" name = "email" placeholder = "user@domain.com">
+
+                <br><br>
+
+                <textarea id = "question" name = "question" placeholder = " ask your question here."></textarea>
+
+                <br><br>
+
+                <input type = "submit" value = "submit">
+
+            </form>
+        </div>
+
+        <script>
+            $("dt").hover(function() {
+                $(this).toggleClass("highlight");
+            });
+
+            $("dt").click(function() {
+                $(this).next().slideToggle();
+            });
+
+            $("#showall").click(function() {
+                $("dd").slideDown();
+            });
+
+            $("#hideall").click(function() {
+                $("dd").slideUp();
+            });
+        </script>
+    </body>
+</html>
