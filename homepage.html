@@ -1,8 +1,63 @@
 <html>
   <head>
-    <title>Trove Homepage</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.min.js"></script>
+    <link href="https://fonts.googlefonts.cn/css?family=Do+Hyeon" rel="stylesheet">
   </head>
-  <body>
-    
-  </body>
+<body id="index">
+  <header>
+    <a href="./index.html">
+      <h1 class="fl">Trove</h1>
+    </a>
+    <div class="fr">
+      <a href="./about.html" class="btns">ABOUT</a>
+      <a href="" class="btns">GOALS</a>
+      <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/contact.html" class="btns">CONTACT</a>
+      <div href="javascript:;" class="menu">
+        <img src="./images/menu.png" alt="">
+        <div class="downlist">
+          <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/calendar.html">Calendar</a>
+          <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/todolist.html">To-do List</a>
+          <a href="">Home Life</a>
+          <a href="">Pomodoro</a>
+          <a href="">Weekends</a>
+          <a href="">Socialize</a>
+          <a href="">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="btnhead"></div>
+  <div class="leftbox">
+    Organize your college experience.
+    <a href="./about.html">Get Started</a>
+  </div>
+  <p class="txt">I'm going to plan everything ahead.</p>
+  <script>
+    $(function () {
+      // $('.btnhead').click(function () {
+      //   if ($('#index').hasClass('sure')) {
+      //     $('#index').removeClass('sure');
+      //     $('.txt').fadeOut();
+      //   } else {
+      //     $('#index').addClass('sure');
+      //     $('.txt').fadeIn();
+      //   }
+      // })
+      $('.btnhead').on('mouseenter', function () {
+        $('#index').addClass('sure');
+        $('.txt').fadeIn();
+      })
+      $('.btnhead').on('mouseleave', function () {
+        $('#index').removeClass('sure');
+        $('.txt').fadeOut();
+      })
+      $('.menu').click(function () {
+        $('.downlist').slideToggle();
+      })
+    })
+  </script>
+</body>
 </html>
