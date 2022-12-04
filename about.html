@@ -1,88 +1,105 @@
 <html>
-    <head>
-        <title>about test page</title>
-        <style>
-            figure {
-                width: 20%;
-            }
 
-            body {
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery.min.js"></script>
+  <link href="https://fonts.googlefonts.cn/css?family=Do+Hyeon" rel="stylesheet">
+</head>
 
-            img {
-                width: 100%;
-            }
-
-            #about {
-                width: 60%;
-                margin: auto;
-            }
-
-            #aryatitle {
-                margin: auto;
-            }
-        </style>
-    </head>
-    <body>
-        <div id = "header">
-
+<body id="about">
+  <header>
+    <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/">
+      <h1 class="fl">Trove</h1>
+    </a>
+    <div class="fr">
+      <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/about.html" class="btns">ABOUT</a>
+      <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/contact.html" class="btns">CONTACT</a>
+      <div href="javascript:;" class="menu">
+        <img src="./images/menu.png" alt="">
+        <div class="downlist">
+          <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/calendar.html">Calendar</a>
+          <a href="http://webdev.iyaclasses.com/~zhangcry/acad275/groupproject/todolist.html">To-do List</a>
+          <a href="">Home Life</a>
+          <a href="">Pomodoro</a>
+          <a href="">Weekends</a>
+          <a href="">Socialize</a>
+          <a href="">FAQ</a>
         </div>
-        <div id = "about">
-            <p></p>
-            Besides being a very academically- and professionally-inclined institution, USC is also popularly known for the heavy emphasis on a social culture. The overall culture of USC is constantly encouraging students to prioritize both aspects (academics and social), and as a result, there is often a gray area between both. With the lines being blurred, USC students struggle with staying organized and setting their priorities straight. While this problem can be seen at USC, it is also quite prevalent within other college institutions across the country.
-            </p><p>
-            Staying organized is a big concern within the USC student population and students attending other colleges, so this website will provide resources and tips on how students can address this concern of theirs. Additionally, being USC students ourselves, we believe that we can identify resources that are most applicable to students at USC. 
-            </p>
-        </div>
+      </div>
+    </div>
+  </header>
+  <h2 class="title">Meet the Team</h2>
+  <div class="mainbox">
 
-        <hr>
-        <div id = "team">
-            <div id = "arya">
-                <figure>
-                    <img src = "aryaimg.png">
-                    <figcaption>
-                        <div id = "aryatitle">
-                            &nbsp&nbsp&nbsp&nbsp&nbsp<strong>Arya Tandon</strong>, <em>Project Manager</em>
-                        </div>
-                        <br><br>
-                        Arya Tandon is the project manager for TROVE. She is a graphic designer based in LA and 
-                        the Bay Area. Her designs navigate the intersections between accessibiliity and aesthetics. She 
-                        is currently studying Cognitive Science and Designing for Digital Experiences at the University of 
-                        Southern California.
-                    </figcaption>
-                </figure>
-            </div>
-            <div id = "lisza">
-                <figure>
-                    <img src="lisza_ny.JPG">
-                    <figcaption>
-                        <div id = "liszatitle">
-                            &nbsp&nbsp&nbsp&nbsp&nbsp<strong>Lisza Lo</strong>, <em>Lead Designer</em>
-                        </div>
-                        <br><br>
-                        Lisza Lo is the Lead Designer of Trove. At the moment, she is a third-year student at the University
-                        of Southern California studying Business Administration with an emphasis in Marketing and a minor in
-                        Designing for Digital Experiences. Professionally, she is hoping to pursue a career in product
-                        marketing within the technology space.
-                    </figcaption>
-                </figure>
-            </div>
-            <div id = "crystal">
-                <figure>
-                    <img src="crystalimg.jpg">
-                    <figcaption>
-                        <div id = "crystaltitle">
-                            &nbsp&nbsp&nbsp&nbsp&nbsp<strong>Crystal Zhang</strong>, <em>HTML and CSS Developer</em>
-                        </div>
-                        <br><br>
-                        Crystal Zhang is an HTML and CSS Developer of Trove. She is majoring in Architecture and minoring 
-                        in Digital experiences at the University of Southern California. She is passionate about artistic design and
-                        hopes to create a great digital experience between people and technologies. 
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
+    <div class="conpngbox btn-group ">
+      <div class="btn"><img src="./images/arya.JPEG" alt=""></div>
+      <div class="btn "><img src="./images/lisza.jpg" alt=""></div>
+      <div class="btn "><img src="./images/crystal.jpg" alt=""></div>
+    </div>
+    <div class="lefttxt">
+      <p class="tit"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
 
-    </body>
+
+  <div class="text">
+    <h2>Our Mission</h2>
+    <br>
+    <div>
+      1. Besides being a very academically- and professionally-inclined institution, USC is also popularly known for the
+      heavy emphasis on a social culture. The overall culture of USC is constantly encouraging students to prioritize
+      both aspects (academics and social), and as a result, there is often a gray area between both. With the lines
+      being blurred, USC students struggle with staying organized and setting their priorities straight. While this
+      problem can be seen at USC, it is also quite prevalent within other college institutions across the country.
+    </div>
+    <br>
+    <div>
+      2. Staying organized is a big concern within the USC student population and students attending other colleges, so
+      this website will provide resources and tips on how students can address this concern of theirs. Additionally,
+      being USC students ourselves, we believe that we can identify resources that are most applicable to students at
+      USC.
+    </div>
+  </div>
+
+  <script>
+    let list = [
+      {
+        tit: 'Arya Tandon, Project Manager',
+        'desc': `Arya Tandon is the project manager for TROVE. She is a graphic designer based in LA and the Bay Area. Her designs navigate the intersections between accessibiliity and aesthetics. She is currently studying Cognitive Science and Designing for Digital Experiences at the University of Southern California.`,
+      },
+      {
+        tit: 'Lisza Lo, Lead Designer',
+        'desc': `Lisza Lo is the Lead Designer of Trove. At the moment, she is a third-year student at the University of Southern California studying Business Administration with an emphasis in Marketing and a minor in Designing for Digital Experiences. Professionally, she is hoping to pursue a career in product marketing within the technology space.`,
+      }, {
+        tit: 'Crystal Zhang, HTML and CSS Developer',
+        'desc': `Crystal Zhang is an HTML and CSS Developer of Trove. She is majoring in Architecture and minoring in Digital experiences at the University of Southern California. She is passionate about artistic design and hopes to create a great digital experience between people and technologies.`,
+      }
+    ]
+    $(function () {
+      $('.menu').click(function () {
+        $('.downlist').slideToggle();
+      })
+      $('.conpngbox .btn').click(function () {
+        var index = $(this).index();
+        if ($(this).hasClass('sure')) {
+          $(this).removeClass('sure hide').siblings('').removeClass('hide')
+          $('.conpngbox').removeClass('show');
+          $('.title').show();
+          $('.lefttxt').fadeOut();
+        } else {
+          $('.title').hide();
+          $('.conpngbox').addClass('show')
+          $(this).removeClass('hide').addClass('sure').siblings('').addClass('hide').removeClass('sure')
+          $('.lefttxt .tit').html(list[index].tit);
+          $('.lefttxt .desc').html(list[index].desc);
+          $('.lefttxt').fadeIn();
+        }
+      })
+    })
+  </script>
+</body>
+
 </html>
