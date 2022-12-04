@@ -15,6 +15,9 @@
                 text-align: center;
                 font-weight: bolder;
             }
+            #gallery {
+                margin: auto;
+            }
             .box {
                 width: 284px;
                 height: 284px;
@@ -33,6 +36,12 @@
                 font-size: 15pt;
                 font-weight: bolder;
                 color: rgb(72, 71, 71);
+            }
+            .boxicon {
+                width: 50%;
+                margin-left: 25%;
+                margin-top: -15%;
+                
             }
             #b1 {
                 background-color: #CCBBFF;
@@ -81,6 +90,12 @@
             }
 
         </style>
+
+        <script>
+            $(document).ready(function(){
+                $(".boxtitle").hide();
+            });
+        </script>
     </head>
 
     <body>
@@ -123,6 +138,7 @@
                 <div class = "boxtitle">
                     pomofocus.io
                 </div>
+                <img class = "boxicon" src = "timer.png">
             </div>
             <div class = "box" id = "b2">
                 <div class = "boxsection">
@@ -131,6 +147,7 @@
                 <div class = "boxtitle">
                     studywithme.io
                 </div>
+                <img class = "boxicon" src = "alarm.png">
             </div>
             <div class = "box" id = "b3">
                 <div class = "boxsection">
@@ -139,6 +156,7 @@
                 <div class = "boxtitle">
                     benefits of a <br>clean bedroom
                 </div>
+                <img class = "boxicon" src = "bed.png">
             </div>
             <div class = "box" id = "b4">
                 <div class = "boxsection">
@@ -147,6 +165,7 @@
                 <div class = "boxtitle">
                     how to clean quickly
                 </div>
+                <img class = "boxicon" src = "broom.png">
             </div>
             <div class = "box" id = "b5">
                 <div class = "boxsection">
@@ -155,6 +174,7 @@
                 <div class = "boxtitle">
                     smarter living: <br>how to clean
                 </div>
+                <img class = "boxicon" src = "dishes.png">
             </div>
             <div class = "box" id = "b6">
                 <div class = "boxsection">
@@ -163,6 +183,7 @@
                 <div class = "boxtitle">
                     notion
                 </div>
+                <img class = "boxicon" src = "notionlogo.png">
             </div>
             <div class = "box" id = "b7">
                 <div class = "boxsection">
@@ -171,6 +192,7 @@
                 <div class = "boxtitle">
                     google calendar
                 </div>
+                <img class = "boxicon" src = "noun-checklist-4712672.png">
             </div>
             <div class = "box" id = "b8">
                 <div class = "boxsection">
@@ -179,6 +201,7 @@
                 <div class = "boxtitle">
                     best calendar <br>apps of 2023
                 </div>
+                <img class = "boxicon" src = "calendaricon.png">
             </div>
             <div class = "box" id = "b9">
                 <div class = "boxsection">
@@ -187,6 +210,7 @@
                 <div class = "boxtitle">
                     best physical <br>planners to buy
                 </div>
+                <img class = "boxicon" src = "planner.png">
             </div>
             <div class = "box" id = "b10">
                 <div class = "boxsection">
@@ -195,6 +219,7 @@
                 <div class = "boxtitle">
                     los angeles museums
                 </div>
+                <img class = "boxicon" src = "museum.png">
             </div>
             <div class = "box" id = "b11">
                 <div class = "boxsection">
@@ -203,6 +228,7 @@
                 <div class = "boxtitle">
                     malibu beach guide
                 </div>
+                <img class = "boxicon" src = "beach.png">
             </div>
             <div class = "box" id = "b12">
                 <div class = "boxsection">
@@ -211,6 +237,7 @@
                 <div class = "boxtitle">
                     los angeles brunch spots
                 </div>
+                <img class = "boxicon" src = "brunch.png">
             </div>
             <div class = "box" id = "b13">
                 <div class = "boxsection">
@@ -219,6 +246,7 @@
                 <div class = "boxtitle">
                     the ultimate los angeles <br>thrift guide
                 </div>
+                <img class = "boxicon" src = "thrift.png">
             </div>
             <div class = "box" id = "b14">
                 <div class = "boxsection">
@@ -227,6 +255,7 @@
                 <div class = "boxtitle">
                     complete list of things <br>to do in los angeles
                 </div>
+                <img class = "boxicon" src = "hollywood.png">
             </div>
             <div class = "box" id = "b15">
                 <div class = "boxsection">
@@ -235,21 +264,158 @@
                 <div class = "boxtitle">
                     los angeles hiking trails
                 </div>
+                <img class = "boxicon" src = "hike.png">
             </div>
         </div>
 
         <script>
             $(".box").mouseover(function() {
-                $(this).css("opacity", "0.7");
                 $(this).css("border", "2px solid black");
-
             });
 
             $(".box").mouseout(function() {
-                $(this).css("opacity", "1");
                 $(this).css("border", "2px solid white");
             });
 
+
+            // icon to link title
+            $("#b1").hover(function() {
+                $("#b1 .boxicon").fadeOut(100);
+                $("#b1 .boxtitle").slideDown(1000);
+            });
+            $("#b1").mouseout(function() {
+                $("#b1 .boxtitle").slideUp(500);
+                $("#b1 .boxicon").fadeIn(1000);
+            });
+
+            $("#b2").hover(function() {
+                $("#b2 .boxicon").fadeOut(100);
+                $("#b2 .boxtitle").slideDown(1000);
+            });
+            $("#b2").mouseout(function() {
+                $("#b2 .boxtitle").slideUp(500);
+                $("#b2 .boxicon").fadeIn(1000);
+            });
+
+            $("#b3").hover(function() {
+                $("#b3 .boxicon").fadeOut(100);
+                $("#b3 .boxtitle").slideDown(1000);
+            });
+            $("#b3").mouseout(function() {
+                $("#b3 .boxtitle").slideUp(500);
+                $("#b3 .boxicon").fadeIn(1000);
+            });
+
+            $("#b4").hover(function() {
+                $("#b4 .boxicon").fadeOut(100);
+                $("#b4 .boxtitle").slideDown(1000);
+            });
+            $("#b4").mouseout(function() {
+                $("#b4 .boxtitle").slideUp(500);
+                $("#b4 .boxicon").fadeIn(1000);
+            });
+
+            $("#b5").hover(function() {
+                $("#b5 .boxicon").fadeOut(100);
+                $("#b5 .boxtitle").slideDown(1000);
+            });
+            $("#b5").mouseout(function() {
+                $("#b5 .boxtitle").slideUp(500);
+                $("#b5 .boxicon").fadeIn(1000);
+            });
+
+            $("#b6").hover(function() {
+                $("#b6 .boxicon").fadeOut(100);
+                $("#b6 .boxtitle").slideDown(1000);
+            });
+            $("#b6").mouseout(function() {
+                $("#b6 .boxtitle").slideUp(500);
+                $("#b6 .boxicon").fadeIn(1000);
+            });
+
+            $("#b7").hover(function() {
+                $("#b7 .boxicon").fadeOut(100);
+                $("#b7 .boxtitle").slideDown(1000);
+            });
+            $("#b7").mouseout(function() {
+                $("#b7 .boxtitle").slideUp(500);
+                $("#b7 .boxicon").fadeIn(1000);
+            });
+
+            $("#b8").hover(function() {
+                $("#b8 .boxicon").fadeOut(100);
+                $("#b8 .boxtitle").slideDown(1000);
+            });
+            $("#b8").mouseout(function() {
+                $("#b8 .boxtitle").slideUp(500);
+                $("#b8 .boxicon").fadeIn(1000);
+            });
+
+            $("#b9").hover(function() {
+                $("#b9 .boxicon").fadeOut(100);
+                $("#b9 .boxtitle").slideDown(1000);
+            });
+            $("#b9").mouseout(function() {
+                $("#b9 .boxtitle").slideUp(500);
+                $("#b9 .boxicon").fadeIn(1000);
+            });
+
+            $("#b10").hover(function() {
+                $("#b10 .boxicon").fadeOut(100);
+                $("#b10 .boxtitle").slideDown(1000);
+            });
+            $("#b10").mouseout(function() {
+                $("#b10 .boxtitle").slideUp(500);
+                $("#b10 .boxicon").fadeIn(1000);
+            });
+
+            $("#b11").hover(function() {
+                $("#b11 .boxicon").fadeOut(100);
+                $("#b11 .boxtitle").slideDown(1000);
+            });
+            $("#b11").mouseout(function() {
+                $("#b11 .boxtitle").slideUp(500);
+                $("#b11 .boxicon").fadeIn(1000);
+            });
+
+            $("#b12").hover(function() {
+                $("#b12 .boxicon").fadeOut(100);
+                $("#b12 .boxtitle").slideDown(1000);
+            });
+            $("#b12").mouseout(function() {
+                $("#b12 .boxtitle").slideUp(500);
+                $("#b12 .boxicon").fadeIn(1000);
+            });
+
+            $("#b13").hover(function() {
+                $("#b13 .boxicon").fadeOut(100);
+                $("#b13 .boxtitle").slideDown(1000);
+            });
+            $("#b13").mouseout(function() {
+                $("#b13 .boxtitle").slideUp(500);
+                $("#b13 .boxicon").fadeIn(1000);
+            });
+
+            $("#b14").hover(function() {
+                $("#b14 .boxicon").fadeOut(100);
+                $("#b14 .boxtitle").slideDown(1000);
+            });
+            $("#b14").mouseout(function() {
+                $("#b14 .boxtitle").slideUp(500);
+                $("#b14 .boxicon").fadeIn(1000);
+            });
+
+            $("#b15").hover(function() {
+                $("#b15 .boxicon").fadeOut(100);
+                $("#b15 .boxtitle").slideDown(1000);
+            });
+            $("#b15").mouseout(function() {
+                $("#b15 .boxtitle").slideUp(500);
+                $("#b15 .boxicon").fadeIn(1000);
+            });
+
+
+            // links
             $("#b1").click(function() {
                 window.open("https://pomofocus.io/");
             });
@@ -258,7 +424,7 @@
             });
             $("#b3").click(function() {
                 window.open("https://yorlenyscleaningservice.com/why-important-clean-bedroom-benefits/");
-            });
+            });  
             $("#b4").click(function() {
                 window.open("https://blog.nationwide.com/home/home-maintenance/how-to-clean-house-fast/");
             });
